@@ -84,4 +84,4 @@ for (i = 1; i < bikeArray.length; i++) {
 };
 
 // Stampo la bici più leggera in pagina
-resultBike.innerHTML = `La bici più leggera è ${lighterBike.nome}, con il peso di ${lighterBike.peso} kg.`
+resultBike.innerHTML = `La bici più leggera è <strong>${lighterBike.nome}</strong>, con il peso di <strong>${lighterBike.peso}kg</strong>.`
