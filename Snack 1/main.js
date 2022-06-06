@@ -58,11 +58,30 @@ let resultBike = document.querySelector("#resultBike");
 // Creo due variabili per il nome e il peso della prima bici dell'array
 let { nome, peso } = bikeArray[0];
 
-// Creo una variabile che inizialmente avrà il valore
-// del primo elemento dell'array
+// Creo un oggetto che inizialmente avrà il valore
+// del primo oggetto dell'array
 let lighterBike = {
     nome,
     peso,
 };
 
-console.table(lighterBike);
+// Ciclo tutti gli elementi dell'array a partire dal secondo
+// per determinare la bici più leggera
+
+for (i = 1; i < bikeArray.length; i++) {
+
+    // Creo due variabili per nome e peso della bici attuale
+    let { nome, peso } = bikeArray[i];
+
+    // Se il peso della bici attuale è minore,
+    // sovrascrive i dati
+    if (peso < lighterBike.peso) {
+        lighterBike = {
+            nome,
+            peso,
+        };
+    };
+};
+
+// Stampo la bici più leggera in pagina
+resultBike.innerHTML = `La bici più leggera è ${lighterBike.nome}, con il peso di ${lighterBike.peso} kg.`
