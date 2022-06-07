@@ -58,3 +58,5 @@ const arrayFilter = myArray.filter((element, i) => {
 
 console.log("------ Array Filter ------");
 console.log(arrayFilter);
+
+// --------------------------------------------------------- //
